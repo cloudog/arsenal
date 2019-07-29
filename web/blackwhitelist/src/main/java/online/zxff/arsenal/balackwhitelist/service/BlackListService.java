@@ -25,8 +25,7 @@ public class BlackListService {
     }
 
     public Boolean process(String id){
-        VisitInfoChain visitInfoChain=visitInfoMap.getOrDefault(id,new VisitInfoChain());
-        return visitInfoChain.addVisitInfo(new VisitInfo()).isAvailable();
+        return visitInfoMap.getOrDefault(id,new VisitInfoChain()).addVisitInfo(new VisitInfo()).isAvailable();
     }
 
     public class VisitInfoChain extends ArrayList<VisitInfo> {
